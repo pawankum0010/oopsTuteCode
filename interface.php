@@ -1,9 +1,11 @@
 <?php
+//Method Signature Only: Interfaces can only contain method signatures (name, parameters, and return type). They cannot contain any code inside the methods.
 
+//Public Visibility: All methods declared in an interface must be public.
 
-// When multiple classes inherit in a single class then this is called interface. Suppose we have 
-// 2 interface first is parent1 with method addition and second is parent2 with method subtraction. 
-// When both interface implement in child class then both method of interface must be applied in child class. 
+//No Properties: You cannot define variables (properties) in an interface, though you can define constants.
+
+//Multiple Implementation: A single class can implement multiple interfaces, which is a way to get around PHP’s rule that a class can only extend one parent class.
 
 interface parrent1 {
 
