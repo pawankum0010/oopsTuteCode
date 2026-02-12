@@ -5,36 +5,20 @@
 // Circle then it’s calculated area and also when Shape implements in class Rectangle then also this calculates area.
 
 // Overloding
-interface Shape {
-
-    public function calcArea();
+interface Shape{
+    function calculateArea($a,$b=0);
 }
-
-class Circle implements Shape {
-
-    private $radius;
-
-    public function __construct($radius) {
-        $this->radius = $radius;
-    }
-
-    public function calcArea() {
-        return $this->radius * $this->radius * pi();
+class Circle implements Shape{
+    public function calculateArea($a,$b=0){
+        return pi() * $a;
     }
 }
-
-class Rectanglee implements Shape {
-
-    private $width;
-    private $height;
-
-    public function __construct($width, $height) {
-        $this->width = $width;
-        $this->height = $height;
+class Reactangle implements Shape{
+    public function calculateArea($a,$b=0){
+        return $a * $b;
     }
-
-    public function calcArea() {
-        return $this->width * $this->height;
-    }
-
 }
+//$circle = new Circle();
+//echo $circle->calculateArea(10);
+$Reactangle = new Reactangle();
+echo $Reactangle->calculateArea(10,2);
