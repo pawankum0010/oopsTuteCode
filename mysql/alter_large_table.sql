@@ -10,3 +10,7 @@ ALGORITHM=INPLACE,
 LOCK=NONE;
 -- Percona Online Schema Change (pt-osc)
 pt-online-schema-change --execute --alter "MODIFY COLUMN status VARCHAR(50)" D=your_db,t=your_table
+
+-- Pro-Tip: The "Metadata Lock" Trap
+SET lock_wait_timeout = 5; -- Fail if we can't get the lock in 5 seconds
+ALTER TABLE ... ALGORITHM=INSTANT;
